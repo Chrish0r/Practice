@@ -1,0 +1,19 @@
+package ex1;
+
+public class CalcSumLowestToHighest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int von = 3;
+		int bis = 5;
+		int i;
+		int sum = 0;
+		
+		for(i = von; i <= bis; i++) {
+			sum += i;
+		}
+		System.out.println("Sum = " + sum);
+	}
+
+}
