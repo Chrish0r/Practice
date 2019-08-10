@@ -1,0 +1,32 @@
+package test;
+
+import java.util.Scanner;
+
+public class Testing {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 int von, bis, h, summe = 0;
+	        // 1. Zahlen einlesen
+	      	Scanner sc = new Scanner(System.in);
+	        System.out.print("Zahl1: ");
+	        von = sc.nextInt();
+	        System.out.print("Zahl2: ");
+	        bis = sc.nextInt();
+	        // 2. Zahlen ggf. vertauschen
+	        if (von > bis) {
+	        h = von;
+	        von = bis;
+	        bis = h;
+	        }
+	        
+	        while (von <= bis) {
+	        summe = summe + von;
+	        von++;
+	        }
+	        
+	        System.out.println("Summe: " + summe);
+
+	}
+
+}
