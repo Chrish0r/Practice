@@ -1,0 +1,31 @@
+package ex1;
+
+public class Ggt { //kann man auch rekursiv lösen
+	
+	static int ggt(int x, int y) {
+		int i, higher, lower;
+		if(x > y) {
+			higher = x;
+			lower = y;
+		} else {
+			higher = y;
+			lower = x;
+		}
+		
+		if(lower == 0) {
+			return higher;
+		} else {
+			return ggt(lower, higher % lower);
+		}
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int num1 = 21;
+		int num2 = 15;
+		
+		System.out.println("The greatest common divisor of " + num1 + " and " + num2 + " is " + ggt(num1, num2));
+	}
+
+}
