@@ -2,7 +2,7 @@ package ex1;
 
 public class CrossSum {
 	
-	static int crossSum(int n) {
+	public static int crossSum(int n) {
 		int sum = 0;
 		
 		while(n > 0) {
