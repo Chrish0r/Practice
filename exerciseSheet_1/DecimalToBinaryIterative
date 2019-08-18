@@ -1,0 +1,38 @@
+package ex1;
+
+public class DecimalToBinary {
+	
+	public static void decimalToBinary(int n) {
+		int numberOfDigits = 0;
+		int copy_n = n;
+		
+		while(copy_n != 0) {
+			copy_n /= 2;
+			numberOfDigits++;
+		}
+		// System.out.println(numberOfDigits);
+		
+		int bin[] = new int [numberOfDigits];
+		
+		for(int i = 0; i < numberOfDigits; i++) {
+			bin[i] = n % 2;
+			n /= 2;
+			// System.out.print(bin[i]);  testing for number reversed
+		}
+		
+		//now output from from the back to the front
+		
+		for(int i = numberOfDigits; i > 0; i--) {
+			System.out.print(bin[i - 1]);
+		}
+		System.out.println();
+		
+	}
+
+	public static void main(String[] args) {
+		int num = 44; // = 101100 in binary
+		
+		decimalToBinary(num);
+	}
+
+}
