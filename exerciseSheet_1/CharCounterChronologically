@@ -1,0 +1,25 @@
+package ex1;
+
+public class CharCounterPresentation {
+	
+
+	public static void main(String[] args) {
+		String s = "AAAAKKAAB";
+				
+		char[] array = s.toCharArray(); 
+		// System.out.println(array.length); == 9
+		
+		int i;
+		int counter = 1;
+		
+		for(i = 0 ; i < array.length-1; i++) {  
+			if(array[i] != array[i+1]) {
+				System.out.printf("%d%c", counter, array[i]);
+				counter = 1;
+				continue;
+			}
+			counter++;
+		}
+		System.out.printf("%d%c\n", counter, array[i]);
+	} 		
+}
