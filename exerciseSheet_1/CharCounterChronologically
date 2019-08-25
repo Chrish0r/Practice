@@ -13,7 +13,7 @@ public class CharCounterPresentation {
 		int counter = 1;
 		
 		for(i = 0 ; i < array.length-1; i++) {  
-			if(array[i] != array[i+1]) {
+			if((array[i] != array[i+1]) || (counter >= 3)) {
 				System.out.printf("%d%c", counter, array[i]);
 				counter = 1;
 				continue;
