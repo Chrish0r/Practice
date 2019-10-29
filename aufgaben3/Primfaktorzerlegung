@@ -1,0 +1,53 @@
+package aufgabe3;
+
+public class Primfaktorzerlegung {
+
+	public static void main(String[] args) {
+		int counter = 0;
+		int number = 6936;
+		int originalNumber = number;
+		String total = "";
+		String temp = "";
+		
+		for(int i = 2; i <= originalNumber/2; i++) {
+			counter = 0;
+			if((isPrim(i) == true) && (number % i == 0)) {
+				while(number % i == 0) {
+					counter++;
+					number = number / i;
+				}
+			}
+			if(counter > 1) {
+				//System.out.print(i + "^" + counter + " * ");
+				temp += i + "^" + counter + " * ";
+			} 
+			else if (counter == 1) {
+				//System.out.print(i + " *");
+				temp += i + " * ";
+			}
+		}
+		
+		total = total + temp;
+		char [] array = total.toCharArray();
+		
+		for(int i = 0; i < array.length - 2; i++) {
+			System.out.print(array[i]);
+		}
+		
+		
+	}
+	
+	public static boolean isPrim(int num) {
+		
+		if(num == 2) {
+			return true;
+		}
+		
+		for(int i = 2; i <= num/2; i++) {
+			if(num % i == 0) {
+				return false;
+			}
+		}
+		return true;
+	}
+}
